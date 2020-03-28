@@ -13,7 +13,7 @@
 #### Photo of completed project ####
 *In the code below, replace `missingimage.png` with the name of the image, which should be in the `kitexperiments` folder.*
 
-![Image](kitexperiments/experiment_01_01)
+![Image](kitexperiments/experiment_01_01.jpg)
 
 (Insert a caption here)
 
