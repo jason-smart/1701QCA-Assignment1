@@ -64,26 +64,54 @@ Experiment 2: Using a Light Sensor & Analog Inputs
 
 #### Photo of completed project ####
 
-![Image](kitexperiments/experiment_02_01.jpg) ![Image](kitexperiments/experiment_02_02.jpg) ![Image](kitexperiment/experiment_02_03.jpg)
+![Image](kitexperiments/experiment_02_01.jpg) ![Image](kitexperiments/experiment_02_02.jpg) ![Image](kitexperiments/experiment_02_03.jpg)
 
 1: Breadboard Setup for experiment 2.
 
 2 & 3: micro:bit LED Output Display for experiment 2.
 
+#### Experiment Code ####
+
+```javascript
+let light = 0;
+let lightValue = 200;
+
+basic.forever(function () {
+    light = pins.analogReadPin(AnalogPin.P0)
+
+    if (light > lightValue) {
+        basic.showLeds(`
+            # . # . #
+            . # # # .
+            # # # # #
+            . # # # .
+            # . # . #
+            `)
+    } else {
+        basic.showLeds(`
+            # # # . .
+            . # # # .
+            . . # # .
+            . # # # .
+            # # # . .
+            `)
+    }
+})
+
+```
+
 #### Reflection ####
 
-In this experiment, something new to me was or something I learned was (insert something here).
-
-This experiment could be the basis of a real world application such as (insert something here).
+In this experiment, I learnt the basics of how a phototransistor works, as well as the pins.analogReaedPin() function. Using this combined with the display fundamentals given in experiment 1, I was able to display the appropriate symbol on the LED scren when the light level was below a certain threshold. In the real world, this simple circuit and program could be used to activate lights based on ambient light levels, such as street lamps that turn on when it gets dark. In some cases this can be more reliable than a timer because as the year progresses sunset times will change. However it can be easily faulted and even manipulated if the phototransistor is covered. 
 
 ### Experiment name ###
 
-(Replace this with the experiment name)
+Experiment 4: Using a Transistor to Drive a Motor
 
 #### Photo of completed project ####
 In the code below, replace imagemissing.jpg with the name of the image, which should be in the kitexperiments folder.
 
-![Image](missingimage.png)
+![Image](kitexperiments/experiment_04_01.jpg) ![Image](kitexperiments/experiment_04_02.jpg)
 
 (Insert a caption here)
 
