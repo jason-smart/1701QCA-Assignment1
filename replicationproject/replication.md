@@ -119,7 +119,9 @@ Prototyping is an important stage in any project as continuity and consistency o
 *There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. Use the code below to include images, and copy it for each image, updating the information for each.*
 
 ![Image](images/test_01.jpg)
+
 I first started by completing the basic instructions provided in the project's outline. I used alligator clips attatched directly to the micro:bit so that I could easily make connection and see the output of the LED screen. The clip in the image is connected ti P1 so that I could test whether or not other pins would work in place of P0, this came in handy not long after in the project's construction. At this point the code was as shown below:
+
 
 ```javascript
 let t1 = 0;
@@ -153,26 +155,39 @@ basic.forever(function () {
 ```
 
 ![Image](images/tet_02.jpg)
+
 After this I connected the micro:bit to the breadboard dock so that I could integrate the use of LEDs. Green and red were used because they are most often connected to 'stop' and 'go', or 'standby' and 'complete' as they are in this case. I used the green and red wires connected as shown to touch against the brown wire which was connected to ground. This allowed me to test connection of the gates with out plugging things in and out constantly.
 
+
 ![Image](images/test_03.jpg)
+
 After adding the LEDs to the breadboard I added the piezo buzzer to provide audio feedback to the user when each gate is crossed. At this stage I was still using pin wires to test connections before the gates were built. This would be one of the last iterations of the breadboard before the final product as it had all needed functionality.
 
+
 ![Image](images/closeup.jpg)
+
 The only things different after the third iteration with the speaker were the adition of two gate wires running along the positive and negative strips of the breadboard. This allowed me to connect the clip wires on the edge and gave me extra length, which was needed to reach the gates. As well as this a ground wire was routed from one of the LEDs to an alligator clip that would then be wplit off to both gates. 
 
+
 ![Image](images/gate.jpg)
+
 The gates are simple: two pieces of aluminium foil at each gate for positive and negative connection. When these two pieces are linked by the car, the circuit of the first gate is complete and the signal is sent to the micro:bit. This then carries out its function as defined above and waits for the next input at the second gate.
 
+
 ![Image](images/truck.jpg)
+
 The car is a small toy truck with aluminium foil connecting the two wheel axes. This allows constant contact with the ground and enough surface area to effectively link the gate terminals at any point along it's travel.
 
+
 ![Image](images/layout.jpg)
+
 The final layout of the breadboard at time of iteration.
 
 ### Circuit Diagram ###
 
+
 ![Image](images/Circuit.png)
+
 
 ## Project Code ##
 
@@ -260,26 +275,25 @@ This project is a simlpe system that records the time it takes to travel between
 
 *Try to capture the image as if it were in a portfolio, sales material, or project proposal. The project isn't likely to be something that finished, but practice making images that capture the project in that style.*
 
-![Image](Assignment_1_Breadboard.jpg)
+![Image](images/Assignment_1_Breadboard.jpg)
 
 ### Additional view ###
 
-*Provide some other image that gives a viewer a different perspective on the project such as more about how it functions, the project in use, or something else.*
+Once the car connects the two terminals at the first gate, the red LED is activated and a high buzz tone is played. The car then continues down the line until it connects the two terminals at the second gate, where the green LED is activated and a low buzz tone is played. The crossing of the gates is also represented on the LED screen on the micro:bit, before it is cleared and the speed is displayed. Then the screen is cleared and LEDs are switched off effectively reseting the system.
 
-![Image](missingimage.png)
+![Image](images/layout.jpg)
+
+![Image](images/gate.jpg)
 
 ### Reflection ###
-
-*Describe the parts of your project you felt were most successful and the parts that could have done with improvement, whether in terms of outcome, process, or understanding.*
 
 The most succesful part of the project was the software iteration itself. After simple iterations of the orignal gates concept, provided with instructions, it was extremely easy to add extra functionality afterwards such as the LEDs and buzzer. All these added features required was a short search in the documentation to find which pins worked best for activating the LEDs.
 
 Ideally with more time, which I may have had if I wasn't sick, I could have made a cleaner and more aesthetically pleasing final product on the construction side of things (hidden wires, presented LEDs etc). But with all necessary components visible as well as a relatively clean look I think that it is sufficient, especially considering its reliability.
 
-*What techniques, approaches, skills, or information did you find useful from other sources (such as the related projects you identified earlier)?*
+Because when the gate is crossed the time stamp is grabbed, the car could cross gate 1 multiple times and reset the first time each crossover. But if the second gate is crossed the speed will automatically be 0 because there is no initial time. This could be overcome with a boolean system that checks if a gate has been crossed and only calculates speed once both gates have been crossed. Then in theory you could take the absolute of the speed value given, this way if the car for some reason moves through the system backwards, the correct speed would still be given. 
+
+When outputting the speed in metres per second, the micro:bit output an unreasonably long string of decimal places from the floating point number. After attempting all the general javascript methods to round to smaller decimal points, the micro:bot itself would still provide the endless list of numbers. After research and trial and error, I took the entire long number, converted it to a string, and then used the string.Slice() method to cut everything after 2 decimal places. A similar answer to the problem is provided on [StackOverflow](https://stackoverflow.com/questions/57230963/how-do-i-round-to-1-decimal-on-the-bbcmicrobit-with-javascript-w-o-tofixed-t) by user [Monok](https://stackoverflow.com/users/8519830/monok) but only truly worked after my minor modification.
 
 
-*What ideas have you read, heard, or seen that informed your thinking on this project? (Provide references.)*
-
-
-*What might be an interesting extension of this project? In what other contexts might this project be used?*
+An interesting extension of this project could be to implement the traffic lights from the Related Project 3. This could be put into a road system where each car must wait for a green light before crossing a gate and having an alarm set if they cross before a green light. Other than this, physical gates could be used so that the entry gate is only opened once the car has gone through the exit gate, creating a road block system. Creating this system in a water setting could hold values for water traffick such as boats or even marine wildlife. This project could also be modified to be in use with railways, airport runways, and effectively any mode of transportation to measure congestion and speed.
