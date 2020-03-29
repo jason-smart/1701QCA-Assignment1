@@ -154,7 +154,7 @@ basic.forever(function () {
 })
 ```
 
-![Image](images/tet_02.jpg)
+![Image](images/test_02.jpg)
 
 After this I connected the micro:bit to the breadboard dock so that I could integrate the use of LEDs. Green and red were used because they are most often connected to 'stop' and 'go', or 'standby' and 'complete' as they are in this case. I used the green and red wires connected as shown to touch against the brown wire which was connected to ground. This allowed me to test connection of the gates with out plugging things in and out constantly.
 
