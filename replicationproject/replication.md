@@ -259,7 +259,8 @@ basic.forever(function () {
 
 ### Video of Project Working ###
 
-https://www.youtube.com/linktovideo
+https://www.youtube.com/watch?v=LbaMRGtM4pc
+
 
 ### Project description ###
 
