@@ -56,7 +56,7 @@ basic.forever(function () {
 
 #### Reflection ####
 
-In this experiment, I learned the method of display for the micro:bit and how the API interacts with it. The experiment also showed me the application specific functions such as input.onButtonPressed(), and conneting external buttons to be used for the A and B buttons. Learning these skills sets a foundation for interaction with the microbit for further projects and experiments. Because this is the first experiment, it is used to only show the basics of the micro:bit and has no real world application except for the fundamentals learnt to be applied later.
+In this experiment, I learned the method of display for the micro:bit and how the API interacts with it. The experiment also showed me the application specific functions such as input.onButtonPressed(), and conneting external buttons to be used for the A and B buttons. Learning these skills sets a foundation for interaction with the microbit for further projects and experiments. Because this is the first experiment, it is used to only show the basics of the micro:bit and has no real world application except for the fundamentals learnt to be applied later. In the code I added a blank display LED statement before each new display to clear the screen so it is not cluttered when the new pattern/word is displayed.
 
 ### Experiment name ###
 
@@ -67,6 +67,7 @@ Experiment 2: Using a Light Sensor & Analog Inputs
 ![Image](kitexperiments/experiment_02_01.jpg) ![Image](kitexperiments/experiment_02_02.jpg) ![Image](kitexperiment/experiment_02_03.jpg)
 
 1: Breadboard Setup for experiment 2.
+
 2 & 3: micro:bit LED Output Display for experiment 2.
 
 #### Reflection ####
