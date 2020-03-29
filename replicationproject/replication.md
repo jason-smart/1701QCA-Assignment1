@@ -52,10 +52,6 @@ https://projects.raspberrypi.org/en/projects/frustration
 This project also uses the concept in fabrication of completing a circuit to trigger an event. The frustration game is a widely popular board game where when a wand is passed over a wire and every time connection is made, a buzzer is signaled.
 
 ## Reading reflections ##
-*Reflective reading is an important part of actually making your reading worthwhile. Don't just read the words to understand what they say: read to see how the ideas in the text fit with and potentially change your existing knowledge and maybe even conceptual frameworks. We assume you can basically figure out what the readings mean, but the more important process is to understand how that changes what you think, particularly in the context of your project.*
-
-*For each of the assigned readings, answer the questions below.*
-
 ### Reading: Don Norman, The Design of Everyday Things, Chapter 1 (The Psychopathology of Everyday Things) ###
 
 *What I thought before:* 
@@ -78,22 +74,37 @@ If someone who is unfamiliar with the project needs to use it, they need to almo
 
 *What I thought before:* 
 
-*What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
+I believed that microinteractions were trivial, unimportant things when designing a product that's main purpose is to be interacted with.
 
+*What I learned:*
 
-*What I would like to know more about: Describe or write a question about something that you would be interested in knowing more about.*
+That smaller interactions that are often forgettable take part in the overall experience of a product and should be important parts of focus in design phases. Accomplishing simple tasks often works together to accomplish a larger task, but when each microinteraction is tedious and/or broken, the user will quikcly become confused and angry.
 
-*How this relates to the project I am working on: Describe the connection between the ideas in the reading and one of your current projects or how ideas in the reading could be used to improve your project.*
+*What I would like to know more about:*
+
+It would be interesting to dive deeper into how microinteractions effect user experience overall as well as common design processes that cover the smaller interactions.
+
+*How this relates to the project I am working on:*
+
+This relates to my project in the sense that the two main points of interaction are microinteractions (rolling the car over the two gates). If this was overcomplicated or provided no feedback than the interaction would be dull and boring and would sour the overall experience of the user
 
 ### Reading: Scott Sullivan, Prototyping Interactive Objects ###
 
 *What I thought before:* 
 
-*What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
+Design is an extremely niche job area that only certain people will be able to understand.
 
-*What I would like to know more about: Describe or write a question about something that you would be interested in knowing more about.*
+*What I learned:*
 
-*How this relates to the project I am working on: Describe the connection between the ideas in the reading and one of your current projects or how ideas in the reading could be used to improve your project.*
+The growing amount of technology and new generations allows an influx of designers that are natively comfortable with technology. Already being comfortable in the area allows them to prototype things quickly and efficiently with personal experience that improves the design catered to other people.
+
+*What I would like to know more about:*
+
+I would like to more about the step by step process that goes into prototyping a product and the different stages if creation that it goes through.
+
+*How this relates to the project I am working on:*
+
+Prototyping is an important stage in any project as continuity and consistency of function needs to be upheld through different iterations of the product.
 
 
 ## Interaction flowchart ##
@@ -105,15 +116,13 @@ If someone who is unfamiliar with the project needs to use it, they need to almo
 
 *In this section, include text and images that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.*
 
-*This should have quite a lot of information!*
-
 *There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. Use the code below to include images, and copy it for each image, updating the information for each.*
 
-![Image](missingimage.png)
-
-*Include screenshots of the code you have used.*
+![Image](images/circuit.png)
 
 ## Project Code ##
+
+The project's code is rather simple and does not involve unnecessary repetions in lines. Most of the space taken up in it is from the basic.showLeds() function that essentially takes 5 lines every time it's used. It is used twice more than absolutely **necessary** but it helps keep the LED display clear and readable which provides a more smooth and satisfying interaction with the product.
 
 ```javascript
 let distance = 1;
@@ -191,7 +200,6 @@ basic.forever(function () {
 
 ### Project description ###
 
-*In a few sentences, describe what the project is and does, who it is for, and a typical use case.*
 This project is a simlpe system that records the time it takes to travel between two points and calculates the speed. Typically, this system would be used on roads to record time between to road points by vehicles. When the first gate is passed the red light will turn on, signalling that timing is in progress, and a tone will be played. When passing the second gate, the green light will turn on, signalling that the process is complete, and a different tone will be played. The speed of the vehicle will then be dispayed on the LED screen in metres per second.
 
 ### Showcase image ###
@@ -209,8 +217,10 @@ This project is a simlpe system that records the time it takes to travel between
 ### Reflection ###
 
 *Describe the parts of your project you felt were most successful and the parts that could have done with improvement, whether in terms of outcome, process, or understanding.*
-The most succesful 
 
+The most succesful part of the project was the software iteration itself. After simple iterations of the orignal gates concept, provided with instructions, it was extremely easy to add extra functionality afterwards such as the LEDs and buzzer. All these added features required was a short search in the documentation to find which pins worked best for activating the LEDs.
+
+Ideally with more time, which I may have had if I wasn't sick, I could have made a cleaner and more aesthetically pleasing final product on the construction side of things (hidden wires, presented LEDs etc). But with all necessary components visible as well as a relatively clean look I think that it is sufficient, especially considering its reliability.
 
 *What techniques, approaches, skills, or information did you find useful from other sources (such as the related projects you identified earlier)?*
 
