@@ -14,6 +14,7 @@
 *In the code below, replace `missingimage.png` with the name of the image, which should be in the `kitexperiments` folder.*
 
 ![Image](kitexperiments/experiment_01_01.jpg) ![Image](kitexperiments/experiment_01_02.jpg) ![Image](kitexperiments/experiment_01_03.jpg)
+![Image](kitexperiments/experiment_01_04.jpg) ![Image](kitexperiments/experiment_01_05.jpg)
 
 (Insert a caption here)
 
