@@ -112,13 +112,21 @@ Prototyping is an important stage in any project as continuity and consistency o
 
 ![Image](images/FlowChart.png)
 
-## Process documentation
+## Process documentation ##
 
 *In this section, include text and images that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.*
 
 *There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. Use the code below to include images, and copy it for each image, updating the information for each.*
 
-![Image](images/circuit.png)
+![Image](images/test_01.jpg)
+![Image](images/tet_02.jpg)
+![Image](images/test_03.jpg)
+![Image](images/closeup.jpg)
+![Image](images/layout.jpg)
+
+### Circuit Diagram ###
+
+![Image](images/Circuit.png)
 
 ## Project Code ##
 
@@ -206,7 +214,7 @@ This project is a simlpe system that records the time it takes to travel between
 
 *Try to capture the image as if it were in a portfolio, sales material, or project proposal. The project isn't likely to be something that finished, but practice making images that capture the project in that style.*
 
-![Image](missingimage.png)
+![Image](Assignment_1_Breadboard.jpg)
 
 ### Additional view ###
 
