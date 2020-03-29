@@ -60,17 +60,26 @@ This project also uses the concept in fabrication of completing a circuit to tri
 
 *What I thought before:* 
 
-*What I learned:* Descoverability and understanding are the most important attribute of design. 
+As a whole, design to me never seemed like a necessary step as long as the finished product worked. Discoverability and understanding were often afterthoughts of my design work instead of being one of the most important points like it should be.
+
+*What I learned:*
+
+Discoverability and understanding are the most important attribute of design. Even if the finished product works as it should, it's useless if nobody can understand how to achieve the intent of the product. Deciding on these important points early on effects the entire design process and can change key points in the product's construction.
 
 *What I would like to know more about: Describe or write a question about something that you would be interested in knowing more about.*
 
-*How this relates to the project I am working on: Describe the connection between the ideas in the reading and one of your current projects or how ideas in the reading could be used to improve your project.*
+Why do engineers and product designers that have not studied human behaviour think that their first assumption is correct? When designing something you have to think about giving it to someone from a different world that has no background knowledge and therefore needs their hand held every step of the interaction. But then when products designed, the experts on the products just assume that it's straight forward, this seems strange to me.
+
+*How this relates to the project I am working on:*
+
+If someone who is unfamiliar with the project needs to use it, they need to almost instantly understand their task and how to complete it. An important part of making this clear is instant feedback such as visual cue and/or audio cue. This further pushed my already seeded idea to include the LEDs that come with the micro:bit as well as the piezo buzzer to give realtime feedback to the operation of the product.
 
 ### Reading: Chapter 1 of Dan Saffer, Microinteractions: Designing with Details, Chapter 1 ###
 
 *What I thought before:* 
 
 *What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
+
 
 *What I would like to know more about: Describe or write a question about something that you would be interested in knowing more about.*
 
