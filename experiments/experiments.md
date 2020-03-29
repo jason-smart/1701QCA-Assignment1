@@ -144,7 +144,7 @@ Experiment 6: Setting The Tone With a Puezo Buzzer
 
 #### Photo of completed project ####
 
-![Image](kitexperiments/experiment_06_01)
+![Image](kitexperiments/experiment_06_01.jpg)
 
 The breadboard setup for experiment 6.
 
@@ -172,7 +172,7 @@ Experiment 7: Wind Power
 
 #### Photo of completed project ####
 
-![Image](kitexperiments/experiment_07_01)
+![Image](kitexperiments/experiment_07_01.jpg)
 
 Breadboard setup for experiment 7.
 
