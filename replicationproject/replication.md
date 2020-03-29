@@ -59,9 +59,9 @@ This project also uses the concept in fabrication of completing a circuit to tri
 
 ### Reading: Don Norman, The Design of Everyday Things, Chapter 1 (The Psychopathology of Everyday Things) ###
 
-*What I thought before: Describe something that you thought or believed before you read the source that was challenged by the reading.*
+*What I thought before:* 
 
-*What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
+*What I learned:* Descoverability and understanding are the most important attribute of design. 
 
 *What I would like to know more about: Describe or write a question about something that you would be interested in knowing more about.*
 
@@ -69,7 +69,7 @@ This project also uses the concept in fabrication of completing a circuit to tri
 
 ### Reading: Chapter 1 of Dan Saffer, Microinteractions: Designing with Details, Chapter 1 ###
 
-*What I thought before: Describe something that you thought or believed before you read the source that was challenged by the reading.*
+*What I thought before:* 
 
 *What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
 
@@ -79,7 +79,7 @@ This project also uses the concept in fabrication of completing a circuit to tri
 
 ### Reading: Scott Sullivan, Prototyping Interactive Objects ###
 
-*What I thought before: Describe something that you thought or believed before you read the source that was challenged by the reading.*
+*What I thought before:* 
 
 *What I learned: Describe what you now know or believe as a result of the reading. Don't just describe the reading: write about what changed in YOUR knowledge.*
 
@@ -91,7 +91,7 @@ This project also uses the concept in fabrication of completing a circuit to tri
 ## Interaction flowchart ##
 *Draw a flowchart of the interaction process in your project. Make sure you think about all the stages of interaction step-by-step. Also make sure that you consider actions a user might take that aren't what you intend in an ideal use case. Insert an image of it below. It might just be a photo of a hand-drawn sketch, not a carefully drawn digital diagram. It just needs to be legible.*
 
-![Image](missingimage.png)
+![Image](images/flowchart.png)
 
 ## Process documentation
 
@@ -105,15 +105,86 @@ This project also uses the concept in fabrication of completing a circuit to tri
 
 *Include screenshots of the code you have used.*
 
-## Project outcome ##
+## Project Code ##
 
-*Complete the following information.*
+```javascript
+let distance = 1;
+let t1 = 0;
+let t0 = 0;
 
-### Project title ###
+pins.digitalWritePin(DigitalPin.P8, 0);
+pins.digitalWritePin(DigitalPin.P12, 0);
+
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+`);
+
+basic.forever(function () {
+    input.onPinPressed(TouchPin.P1, function () {
+        pins.digitalWritePin(DigitalPin.P8, 1);
+        music.playTone(622.25, 100);
+        t0 = control.eventTimestamp();
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+        `);
+    })
+    input.onPinPressed(TouchPin.P2, function () {
+        pins.digitalWritePin(DigitalPin.P12, 1);
+        music.playTone(415.30, 100);
+        t1 = control.eventTimestamp();
+        basic.showLeds(`
+            # . . . #
+            # . . . #
+            # . . . #
+            # . . . #
+            # . . . #
+        `);
+        //Recorded in microseconds, divide by 1 000 000 to convert to milliseconds
+        let time = (t1 / 1000000) - (t0 / 1000000)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+        `);
+        //distance / time
+        let velocity = distance / time;
+        console.log(time.toString());
+        let velString = velocity.toString().slice(0, 4);
+        console.log(velString);
+        basic.showString(velString + "m/s");
+
+        basic.pause(100);
+        pins.digitalWritePin(DigitalPin.P8, 0);
+        pins.digitalWritePin(DigitalPin.P12, 0);
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+        `);
+    })
+})
+```
+
+# Project outcome #
+
+## Speed from Timing Gates ##
 
 ### Project description ###
 
 *In a few sentences, describe what the project is and does, who it is for, and a typical use case.*
+This project is a simlpe system that records the time it takes to travel between two points and calculates the speed. Typically, this system would be used on roads to record time between to road points by vehicles. When the first gate is passed the red light will turn on, signalling that timing is in progress, and a tone will be played. When passing the second gate, the green light will turn on, signalling that the process is complete, and a different tone will be played. The speed of the vehicle will then be dispayed on the LED screen in metres per second.
 
 ### Showcase image ###
 
@@ -130,6 +201,7 @@ This project also uses the concept in fabrication of completing a circuit to tri
 ### Reflection ###
 
 *Describe the parts of your project you felt were most successful and the parts that could have done with improvement, whether in terms of outcome, process, or understanding.*
+The most succesful 
 
 
 *What techniques, approaches, skills, or information did you find useful from other sources (such as the related projects you identified earlier)?*
