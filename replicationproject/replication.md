@@ -119,10 +119,56 @@ Prototyping is an important stage in any project as continuity and consistency o
 *There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. Use the code below to include images, and copy it for each image, updating the information for each.*
 
 ![Image](images/test_01.jpg)
+I first started by completing the basic instructions provided in the project's outline. I used alligator clips attatched directly to the micro:bit so that I could easily make connection and see the output of the LED screen. The clip in the image is connected ti P1 so that I could test whether or not other pins would work in place of P0, this came in handy not long after in the project's construction. At this point the code was as shown below:
+
+```javascript
+let t1 = 0;
+let t0 = 0;
+
+basic.forever(function () {
+    input.onPinPressed(TouchPin.P1, function () {
+        t0 = control.eventTimestamp();
+        basic.showLeds(`
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+        `);
+    })
+    input.onPinPressed(TouchPin.P2, function () {
+        t1 = control.eventTimestamp();
+        basic.showLeds(`
+            # . . . #
+            # . . . #
+            # . . . #
+            # . . . #
+            # . . . #
+        `);
+        //Recorded in microseconds, divide by 1 000 000 to convert to milliseconds
+        let time = (t1 / 1000000) - (t0 / 1000000)
+        basic.showString(time.toString());
+    })
+})
+```
+
 ![Image](images/tet_02.jpg)
+After this I connected the micro:bit to the breadboard dock so that I could integrate the use of LEDs. Green and red were used because they are most often connected to 'stop' and 'go', or 'standby' and 'complete' as they are in this case. I used the green and red wires connected as shown to touch against the brown wire which was connected to ground. This allowed me to test connection of the gates with out plugging things in and out constantly.
+
 ![Image](images/test_03.jpg)
+After adding the LEDs to the breadboard I added the piezo buzzer to provide audio feedback to the user when each gate is crossed. At this stage I was still using pin wires to test connections before the gates were built. This would be one of the last iterations of the breadboard before the final product as it had all needed functionality.
+
 ![Image](images/closeup.jpg)
+The only things different after the third iteration with the speaker were the adition of two gate wires running along the positive and negative strips of the breadboard. This allowed me to connect the clip wires on the edge and gave me extra length, which was needed to reach the gates. As well as this a ground wire was routed from one of the LEDs to an alligator clip that would then be wplit off to both gates. 
+
+![Image](images/gate.jpg)
+The gates are simple: two pieces of aluminium foil at each gate for positive and negative connection. When these two pieces are linked by the car, the circuit of the first gate is complete and the signal is sent to the micro:bit. This then carries out its function as defined above and waits for the next input at the second gate.
+
+![Image](images/truck.jpg)
+The car is a small toy truck with aluminium foil connecting the two wheel axes. This allows constant contact with the ground and enough surface area to effectively link the gate terminals at any point along it's travel.
+
 ![Image](images/layout.jpg)
+The final layout of the breadboard at time of iteration.
 
 ### Circuit Diagram ###
 
