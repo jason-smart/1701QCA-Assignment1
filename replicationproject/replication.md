@@ -12,13 +12,45 @@ https://makecode.microbit.org/projects/timing-gates
 *Find about 6 related projects to the project you choose. A project might be related through  function, technology, materials, fabrication, concept, or code. Don't forget to place an image of the related project in the* `replicationproject` *folder and insert the filename in the appropriate places below. Copy the markdown block of code below for each project you are showing, updating the number* `1` *in the subtitle for each.*
 
 ### Related project 1 ###
-(Insert name of project)
+#### Infrared Timing Gate ####
 
-(Insert URL to project)
+https://bigl.es/micro-bit-infrared-timing-gate/
 
-![Image](missingimage.png)
+![Image](images/similar/project_1_infrared.png)
 
-This project is related to mine because (insert reasons here).
+This project is related to mine because it starts with the same project, then advances it to a far higher level. The project finalises by using infrared sensors to record the start and end of the timing as apposed to a crude electrical circuit to record these events.
+
+### Related project 2 ###
+#### Wireless Laser Gate ####
+
+https://create.arduino.cc/projecthub/Pablerdo/wireless-laser-gate-timing-system-for-track-and-field-ba8cd9
+![Image](images/similar/project_2_laser.jpg)
+
+This project is related to mine because it is also a timing gate, however instead of using basic electrical circuits, it uses lasers and LDRs or *photoresistors*. As well as this, the project employs tranceivers, and is built on the Arduino Uno platform, allowing the different gate modules to be wireless.
+
+### Related project 3 ###
+#### Traffic Light System ####
+
+https://www.hackster.io/anish78/traffic-light-system-using-bbc-micro-bit-da2f47
+![Image](images/similar/project_3_traffic.jpg)
+
+This project is related to mine because it could be used in conjunction with the timing gate system. In principle, if the timing gates were used on the road, the traffic lights could be used as a system to limit the inflow of traffic between the two gates, allowing one car to pass over both gates before the next care is allowed through.
+
+### Related project 4 ###
+#### Microfootball ####
+
+https://make.techwillsaveus.com/microbit/activities/microfootball
+![Image](images/similar/project_4_football.jpg)
+
+This project is related to mine because it uses the same principal of connection to trigger an event. When the back of the net (covered in aluminium foil) touches the other foil plate, the connection is completed and the micro:bit reads an input to one of its pins, in turn triggering an event in the code. This is the same system used on the timing gates project where the object crossing the gates completes the connection of the first circuit. 
+
+### Related project 5 ###
+#### Frustration ####
+
+https://projects.raspberrypi.org/en/projects/frustration
+![Image](images/similar/project_5_frustration.png)
+
+This project also uses the concept in fabrication of completing a circuit to trigger an event. The frustration game is a widely popular board game where when a wand is passed over a wire and every time connection is made, a buzzer is signaled.
 
 ## Reading reflections ##
 *Reflective reading is an important part of actually making your reading worthwhile. Don't just read the words to understand what they say: read to see how the ideas in the text fit with and potentially change your existing knowledge and maybe even conceptual frameworks. We assume you can basically figure out what the readings mean, but the more important process is to understand how that changes what you think, particularly in the context of your project.*
