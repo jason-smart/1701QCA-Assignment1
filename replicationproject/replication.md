@@ -1,9 +1,4 @@
 # Assessment 1: Replication project
-
-*Fill out the following workbook with information relevant to your project.*
-
-*Markdown reference:* [https://guides.github.com/features/mastering-markdown/](http://guides.github.com/features/mastering-markdown/)
-
 ## Replication project choice ##
 ### Timing Gates ###
 https://makecode.microbit.org/projects/timing-gates
@@ -108,15 +103,10 @@ Prototyping is an important stage in any project as continuity and consistency o
 
 
 ## Interaction flowchart ##
-*Draw a flowchart of the interaction process in your project. Make sure you think about all the stages of interaction step-by-step. Also make sure that you consider actions a user might take that aren't what you intend in an ideal use case. Insert an image of it below. It might just be a photo of a hand-drawn sketch, not a carefully drawn digital diagram. It just needs to be legible.*
 
 ![Image](images/FlowChart.png)
 
 ## Process documentation ##
-
-*In this section, include text and images that represent the development of your project including sources you've found (URLs and written references), choices you've made, sketches you've done, iterations completed, materials you've investigated, and code samples. Use the markdown reference for help in formatting the material.*
-
-*There will likely by a dozen or so images of the project under construction. The images should help explain why you've made the choices you've made as well as what you have done. Use the code below to include images, and copy it for each image, updating the information for each.*
 
 ![Image](images/test_01.jpg)
 
@@ -266,6 +256,10 @@ basic.forever(function () {
 # Project outcome #
 
 ## Speed from Timing Gates ##
+
+### Video of Project Working ###
+
+https://www.youtube.com/linktovideo
 
 ### Project description ###
 
