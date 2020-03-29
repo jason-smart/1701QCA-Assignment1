@@ -109,49 +109,91 @@ In this experiment, I learnt the basics of how a phototransistor works, as well 
 Experiment 4: Using a Transistor to Drive a Motor
 
 #### Photo of completed project ####
-In the code below, replace imagemissing.jpg with the name of the image, which should be in the kitexperiments folder.
 
 ![Image](kitexperiments/experiment_04_01.jpg) ![Image](kitexperiments/experiment_04_02.jpg)
 
-(Insert a caption here)
+1 & 2: Fan speed dictated by transistor oscillation.
+
+#### Experiment Code ####
+
+```javascript
+let duty = 0;
+
+basic.forever(function () {
+    while (duty < 1023) {
+        pins.analogWritePin(AnalogPin.P0, duty);
+        duty += 1;
+        basic.pause(10);
+    }
+    while (duty > 0) {
+        pins.analogWritePin(AnalogPin.P0, duty);
+        duty -= 1;
+        basic.pause(10);
+    }
+})
+
+```
 
 #### Reflection ####
 
-In this experiment, something new to me was or something I learned was (insert something here).
-
-This experiment could be the basis of a real world application such as (insert something here).
+In this experiment, transistors were introduced as a component. As well as this the pins.analogWritePin() function was introduced, allowing a signal to be sent from the pin to the circuit. Because the transistor was involved a number range could be used to vary the amount of current being sent from the board to the motor. Using this functionality and the built-in time system of the micro:bit, the fan could be oscillated over time from no speed to a high speed. Using this along with a temperature guage would allow a real world application of temperature control on a larger scale. The higher the temperature guage reads the more current is sent to the fan, therefore the faster the fan goes.
 
 ### Experiment name ###
 
-(Replace this with the experiment name)
+Experiment 6: Setting The Tone With a Puezo Buzzer
 
 #### Photo of completed project ####
-In the code below, replace imagemissing.jpg with the name of the image, which should be in the kitexperiments folder.
 
-![Image](missingimage.png)
+![Image](kitexperiments/experiment_06_01)
 
-(Insert a caption here)
+The breadboard setup for experiment 6.
+
+#### Experiment Code ####
+
+```javascript
+input.onButtonPressed(Button.AB, function () {
+    music.beginMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once)
+})
+input.onButtonPressed(Button.A, function () {
+    music.playTone(400, 500);
+})
+input.onButtonPressed(Button.B, function () {
+    music.playTone(Note.C, music.beat(1));
+})
+```
 
 #### Reflection ####
 
-In this experiment, something new to me was or something I learned was (insert something here).
-
-This experiment could be the basis of a real world application such as (insert something here).
+This experiment introduces the basics of creating tone and melody with a piezo buzzer. It familiarized me with the music.playTone() function, the music.beginMelody() function, and the provided music library. It combined this with the already taught input.onButtonPressed(). Like experiment 1, this is a fundamentals excercise and provides no real world application, but gives skills that can be applied to larger projects.
 
 ### Experiment name ###
 
-(Replace this with the experiment name)
+Experiment 7: Wind Power
 
 #### Photo of completed project ####
-In the code below, replace imagemissing.jpg with the name of the image, which should be in the kitexperiments folder.
 
-![Image](missingimage.png)
+![Image](kitexperiments/experiment_07_01)
 
-(Insert a caption here)
+Breadboard setup for experiment 7.
+
+#### Experiment Code ####
+
+```javascript
+let highest = 0;
+let value = 0;
+
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(highest);
+})
+
+basic.forever(function () {
+    value = pins.analogReadPin(AnalogPin.P0);
+    if (value > highest)
+        highest = value;
+})
+
+```
 
 #### Reflection ####
 
-In this experiment, something new to me was or something I learned was (insert something here).
-
-This experiment could be the basis of a real world application such as (insert something here).
-
+The final experiment uses skills learnt before (such as the analog read pin and motor connection.) to read the voltage produced from moving the flan blades manually. When the blades were moved (by touch or by being blown on), the analog digital converter input on Pin0 measured the power gernerated by it and recorded the highest value. This value was then displayed on the LED screen when button A was pressed. This has many real world applications such as water flow and wind speed but the most direct connection would be to wind turbines and measuring their voltage output as report for green energy production.
